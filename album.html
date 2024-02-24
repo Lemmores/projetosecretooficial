@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/PS-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous">
+    <title>Projeto Secreto</title>
+    <style>
+        body {
+            background: #242424;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .rosa {
+            background-color: black;
+        }
+
+        .amarelo {
+            background-color: yellow;
+        }
+
+        .navbar-dark .navbar-nav .nav-link.active,
+        .navbar-dark .navbar-nav .show > .nav-link {
+            color: white;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: white;
+            font-size: 20px;
+        }
+
+        .conteudo {
+            margin-top: 50px;
+            color: rgb(255, 255, 255);
+        }
+
+        .conteudo h2 {
+            text-align: center;
+        }
+
+        .conteudo h1 {
+            margin-top: 40px;
+            font-weight: 500;
+            text-align: center;
+            background-color: white;
+            color: rgb(0, 0, 0);
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+        }
+
+        .cartao h4 {
+        margin-top: 10px;
+        color: #000; /* Altere a cor do texto conforme necessário */
+        }
+
+        .newsletter {
+            margin-top: 50px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding-top: 15px;
+        }
+
+        .newsletter form {
+            margin-top: 20px;
+        }
+
+        .newsletter form .form-input {
+            padding: 10.5px;
+        }
+
+        .newsletter form .btn-submit1 {
+            transition: all .3s ease-in-out;
+            margin-left: 30px;
+        }
+
+        .newsletter form .btn-submit2 {
+            transition: all .3s ease-in-out;
+            margin-right: 150px;
+        }
+
+        .newsletter form .btt-card a {
+            margin-top: 5px;
+        }
+
+        .newsletter form .btn-submit:hover {
+            background: white;
+            border: 1px solid white;
+            color: white;
+        }
+
+        footer {
+            color: white;
+            font-weight: 500;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+
+        .coluna {
+            flex: 0 0 33.33%;
+            max-width: 33.33%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .cartao {
+            background: #fff;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .cartao img {
+            width: 100%;
+        }
+
+        .cartao::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.7);
+            transition: all 1s ease;
+        }
+
+        .cartao:hover::after {
+            border-top: 50px solid #f5e9f8;
+            border-right: 50px solid #29343e;
+        }
+
+        @media (max-width: 800px) {
+            .coluna {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        /*Conteúdo - cards
+------------------------------------*/
+        .cards{
+            display: flex;
+            margin-top: 50px;
+        }
+
+        .cards img{
+            height: 40vh;
+        }
+
+        .conteudo-card{
+            
+        }
+
+        .img-card{
+            
+            text-align: center;
+        }
+
+        .texto-card{
+            text-align: justify;
+            margin-left: 10px;
+        }
+
+
+
+        .botao-card{
+            text-align: center;
+        }
+
+        .botao-card a{
+            text-transform: uppercase;
+            margin-left: 20px;
+            margin-top: 8px;
+            background: #f6f3f2;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 2px;
+            color: white;
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            transition: all .3s ease-in-out;
+            text-decoration: none;
+            
+        }
+
+        .btt-card a{
+            text-transform: uppercase;
+            margin-right: 10px;
+            background: rgb(255, 255, 255);
+        
+            border-radius: 2px;
+        
+            display: inline-block;
+            padding: 3px 3px;
+            font-size: 0.9rem;
+            transition: all .3s ease-in-out;
+            text-decoration: none;
+            
+        }
+
+
+        /*Conteúdo - Loja física
+        ------------------------------------*/
+        .loja-fisica h2{
+        text-align: center;
+        
+        }
+
+        .localizacao{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .localizacao img{
+            width: 52%;
+            margin-right: 15px;
+        }
+
+        .localizacao iframe{
+            align-content: center;
+        }
+
+        .imagem-sobre{
+        background-color: #FCF9BE;
+        height: 42px
+        
+        }
+
+        h2{
+        text-align: center;
+            
+        }
+
+        /*Rodapé
+        ------------------------------------*/
+        footer{
+            color: white;
+            font-weight: 500;
+            padding: 25px;
+            text-align: center;
+        }
+
+
+        @media(max-width: 800px){
+            .form-group{
+                min-width: 100%;
+            }
+            .row{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+            }
+            form{
+                height: 450px;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark rosa">
+    <div class="container-fluid">
+        <!--Logo-->
+        <a class="nav-link" aria-current="page" class="amarelo" href="index.html"><img src="img/PSblack.png"
+                                                                                       width="100px"
+                                                                                       height="100px" object-fit="fill"
+                                                                                       alt="logo do site"><a
+                    class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Links-->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto" style="border: 1px solid rosa;">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" class="amarelo" href="index.html"><b>HOME</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" class="amarelo" href="playlist.html"><b>PLAYLIST</b></a>
+                </li>
+               
+            </ul>
+        </div>
+
+    </div>
+
+</nav>
+<br><br>
+<h2>Cantinho de memórias Leminhos & Sushizada</h2>
+<br><br>
+<div class="container">
+    <div class="coluna">
+        <div class="cartao">
+            <img src="img/date1.jpeg" alt="Foto1">
+            <h4>Primeiro Date - HSM3</h4>
+        </div>
+    </div>
+    <div class="coluna">
+        <div class="cartao">
+            <img src="img/date2.jpeg" alt="Foto1">
+            <h4>Segundo Date - Perfil dos Sonhos</h4>
+        </div>
+    </div>
+    <div class="coluna">
+        <div class="cartao">
+            <img src="img/sushizada1.jpeg" alt="Foto1">
+            <h4>Surpresa de Leminhos</h4>
+        </div>
+    </div>
+    <div class="coluna">
+        <div class="cartao">
+            <img src="img/primeironatal1.jpeg" alt="Foto1">
+            <h4>Natal Juntos</h4>
+        </div>
+    </div>
+    <div class="coluna">
+        <div class="cartao">
+            <img src="img/recado2.jpeg" alt="Foto1">
+            <h4>Mensagem de Natal super fofa de Leminhos s2</h4>
+        </div>
+    </div>
+    <div class="coluna">
+        <div class="cartao">
+            <img src="img/Recado.jpeg" alt="Foto1">
+            <h4>Mensagem de Natal super fofa de Sushizada s2</h4>
+        </div>
+    </div>
+    <div class="coluna">
+        <div class="cartao">
+            <img src="img/date3.jpeg" alt="Foto1">
+            <h4>Terceiro Date - Luan Santana Biografia</h4>
+        </div>
+    </div>
+    <div class="coluna">
+        <div class="cartao">
+            <img src="img/WhatsApp Image 2024-02-24 at 18.15.21 (1).jpeg" alt="Foto1">
+            <h4>Assistindo HMYM</h4>
+        </div>
+    </div>
+    <div class="coluna">
+        <div class="cartao">
+            <img src="img/WhatsApp Image 2024-02-24 at 18.15.21.jpeg" alt="Foto1">
+            <h4>Noite de jogos</h4>
+        </div>
+    </div>
+    <div class="coluna">
+        <div class="cartao">
+            <img src="img/WhatsApp Image 2024-02-24 at 18.32.35.jpeg" alt="Foto1">
+            <h4>Livro de poesias s2</h4>
+        </div>
+    </div>
+    <div class="coluna">
+        <div class="cartao">
+            <img src="img/capacelular.jpg" alt="Foto1">
+            <h4>Modelo de capinha de celular feito por mim</h4>
+        </div>
+    </div>
+    <div class="coluna">
+        <div class="cartao">
+            <img src="img/iconsushi1.jpeg" alt="Foto1">
+            <h4>Desenho Sushizada</h4>
+        </div>
+        <br><br>
+    </div>
+   
+</div>
+  
+  <footer>
+    © Copyright - Marcelo Lemos - 2024.
+</footer>
+  <!--Fim newsletter-->
+</div>
+<!--Fim Conteúdo-->
+
+<!--Início rodapé-->
+
+<!--Fim rodapé-->
+</body>
+
+</body>
+
+</html>
